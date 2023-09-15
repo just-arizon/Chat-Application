@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(111deg, #C3E1E3 17.24%, #C8C3E3 58.08%, #7E92C4 93.41%, #7EC0C4 107.33%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.chat-container{
+    
+}

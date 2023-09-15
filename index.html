@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="person-selector">
+      <button
+        class="button person-selector-btn active-person-btn"
+        id="john-selector"
+      >
+        John
+      </button>
+      <button
+        class="button person-selector-btn active-person-btn"
+        id="jane-selector"
+      >
+        Jane
+      </button>
+    </div>
+    <div class="chat-container">
+      <h2 class="chat-header">John Chatting...</h2>
+      <div class="chat-messages">
+        <!-- Sender -->
+
+        <div class="message sender-bg">
+          <div class="message-sender">John</div>
+          <div class="message-text"></div>
+          <div class="message-timestamp"></div>
+        </div>
+        <!-- Receiver -->
+
+        <div class="message receiver-bg">
+          <div class="message-sender">Jane</div>
+          <div class="message-text"></div>
+          <div class="message-timestamp"></div>
+        </div>
+      </div>
+
+      <form action="" class="chat-input-form">
+        <input type="text" required class="chat-input" placeholder="Type here...">
+        <button class="button send-btn"></button>
+      </form>
+      <button class="button clear-chat-btn">Clear</button>
+    </div>
+  </body>
 </html>

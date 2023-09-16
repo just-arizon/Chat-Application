@@ -28,3 +28,31 @@ const updateMessageSender = (name) => {
 
 johnSelectorBtn.onclick = () => updateMessageSender('John');
 janeSelectorBtn.onclick = () => updateMessageSender('Jane');
+
+const createChatMessageElement = (message) => `
+  <div class="message ${message.sender === 'John' ? 'sender-bg' : 'receiver-bg'}">
+    <div class="message-sender">${message.sender}</div>
+    <div class="message-text">${message.text}</div>
+    <div class="message-timestamp">${message.timestamp}</div>
+  </div>
+`
+
+const sendMessage = (e) => {
+    e.preventDefault();
+
+    const timestamp = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true});
+
+    const message = {
+        sender: messageSender,
+        text: chatInput.value,
+        timestamp,
+      }
+
+    //   Add message to the DOM
+    chatMessages.innerHTML += createChatMessageElement(message)
+      /* Clear input field */
+  chatInputForm.reset()
+
+}
+
+chatInputForm.addEventListener('submit', sendMessage)

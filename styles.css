@@ -56,7 +56,7 @@ h1{
         padding: 0.9em 1.25em;
         margin: auto;
         max-width: 37.5em;
-        height: 40em;
+        /* height: 40em; */
         box-shadow: 0 0 1.25em 0.5em #c3c3c333;
     }
     .chat-header {
@@ -67,7 +67,9 @@ h1{
       .chat-messages {
         height: 30em;
         overflow-y: scroll;
-        background-image: url(./img/HD-wallpaper-whatsapp-cartoon-skull-dark-dead-punk.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
         display: flex;
         flex-direction: column;
         padding: .9em;
@@ -136,7 +138,7 @@ h1{
     font-size: 1em;
     font-weight: bold;
   }
-  .clear-chat-btn {
+  .bg-chat-btn {
     display: block;
-    margin: 2.5em auto;
+    margin: 1.5em auto;
   }

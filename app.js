@@ -52,7 +52,8 @@ const sendMessage = (e) => {
     chatMessages.innerHTML += createChatMessageElement(message)
       /* Clear input field */
   chatInputForm.reset()
-
+   /*  Scroll to bottom of chat messages */
+   chatMessages.scrollTop = chatMessages.scrollHeight
 }
 
 chatInputForm.addEventListener('submit', sendMessage);

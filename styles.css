@@ -62,7 +62,7 @@ h5{
         margin: auto;
         max-width: 37.5em;
         /* height: 40em; */
-        box-shadow: 0 0 1.25em 0.5em #c3c3c333;
+        box-shadow: 0 0 1.25em 0.5em hsla(0, 0%, 76%, 0.2);
     }
     .chat-header {
         margin-bottom: 1em;
@@ -154,6 +154,9 @@ h5{
       }
       .chat-input{
         width: 50%;
+      }
+      .chat-messages {
+        height: 25em;
       }
 }
 @media (max-width: 300px){

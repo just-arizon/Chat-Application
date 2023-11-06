@@ -5,7 +5,7 @@ const chatHeader = document.querySelector('.chat-header');
 const chatMessages = document.querySelector('.chat-messages');
 const chatInputForm = document.querySelector('.chat-input-form');
 const chatInput = document.querySelector('.chat-input');
-
+const messages = JSON.parse(localStorage.getItem('messages')) || [];
 
 let messageSender = "John"
 const updateMessageSender = (name) => {
@@ -25,7 +25,11 @@ const updateMessageSender = (name) => {
     // auto-focus on input field
     chatInput.focus();
 }
-
+window.onload = () => {
+  messages.forEach((message) => {
+    chatMessages.innerHTML += createChatMessageElement(message);
+  })
+}
 johnSelectorBtn.onclick = () => updateMessageSender('John');
 janeSelectorBtn.onclick = () => updateMessageSender('Jane');
 
@@ -47,6 +51,9 @@ const sendMessage = (e) => {
         text: chatInput.value,
         timestamp,
       }
+      // Local Storage Functionality
+      messages.push(message)
+      localStorage.setItem('messages', JSON.stringify(messages));
 
     //   Add message to the DOM
     chatMessages.innerHTML += createChatMessageElement(message)
